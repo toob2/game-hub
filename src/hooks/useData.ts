@@ -10,6 +10,7 @@ interface FetchResponse<T> {
 const useData = <T>(
   endpoint: string,
   requestConfig?: AxiosRequestConfig,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   deps?: any[]
 ) => {
   const [data, setData] = useState<T[]>([]);
