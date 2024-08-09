@@ -5,6 +5,8 @@ import getCroppedImageUrl from "../services/image-url";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 
+import CriticScoreV2 from "./CriticScoreV2";
+
 interface Props {
   game: Game;
 }
@@ -21,7 +23,8 @@ const GameCard = ({ game }: Props) => {
               (platform) => platform.platform
             )}
           />
-          <CriticScore metacritic={game.metacritic} />
+          <CriticScoreV2 metacritic={game.metacritic} />
+          {/* <CriticScore metacritic={game.metacritic} /> */}
         </HStack>
       </CardBody>
     </Card>
